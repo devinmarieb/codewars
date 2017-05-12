@@ -61,3 +61,11 @@ function findOutlier(integers) {
   let even = integers.filter(n => n % 2 == 0)
   return odd.length > even.length ? even[0] : odd[0]
 }
+
+//add all positive numbers in an array
+function addPositives (arr) {
+  let sum = 0
+  let positives = arr.filter(n => n > 0)
+  positives.map(n => sum += n)
+  return sum
+}
