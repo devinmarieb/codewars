@@ -41,3 +41,23 @@ function filterList(list) {
     return typeof item === 'number'
   })
 }
+
+//check codes and expiration dates on coupons
+function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
+  if(enteredCode !== correctCode) {
+    return false
+  }
+  if(new Date(currentDate) > new Date(expirationDate)) {
+    return false
+  }
+  else {
+    return true
+  }
+}
+
+//filter out even or odd outlying numbers in an array
+function findOutlier(integers) {
+  let odd = integers.filter(n => n % 2 !== 0)
+  let even = integers.filter(n => n % 2 == 0)
+  return odd.length > even.length ? even[0] : odd[0]
+}
