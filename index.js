@@ -108,3 +108,17 @@ function stairCase(n) {
     document.write('<br />')
   }
 }
+
+//return string in array of twos, if not even, add '_'
+function separate(str){
+    let i = 0
+    let finalArray = []
+    if(str.length % 2 !== 0) {
+        str = str.concat('_')
+    }
+    while(i < str.length) {
+      finalArray.push(str[i] + str[i+1])
+      i += 2
+    }
+  return finalArray;
+}
