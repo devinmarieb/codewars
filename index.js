@@ -80,16 +80,23 @@ function createPhoneNumber(numbers){
 
 //reverse a string
 function reverse(string) {
+  let newString = string.split('')
+  return newString.reverse().join('')
+}
+
+function reverse(string) {
 	let newString = ''
-	for (var i = string.length - 1; i >= 0; i--) {
+	for (let i = string.length - 1; i >= 0; i--) {
        newString += string[i]
     }
 	return newString
 }
 
-function reverseString(str) {
-  if (str === '')
+function reverse(string) {
+  if (string === '')
     return ''
   else
-    return reverseString(str.substr(1)) + str.charAt(0)
+    return reverseString(string.substr(1)) + string.charAt(0)
 }
+
+//staircase 
