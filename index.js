@@ -69,3 +69,11 @@ function addPositives (arr) {
   positives.map(n => sum += n)
   return sum
 }
+
+//make a phone number
+function createPhoneNumber(numbers){
+  let areaCode = numbers.slice(0, 3)
+  let threeBlock = numbers.slice(3, 6)
+  let fourBlock = numbers.slice(6, 10)
+  return `(${areaCode.join('')}) ${threeBlock.join('')}-${fourBlock.join('')}`
+}
