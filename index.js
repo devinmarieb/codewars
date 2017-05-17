@@ -77,3 +77,19 @@ function createPhoneNumber(numbers){
   let fourBlock = numbers.slice(6, 10)
   return `(${areaCode.join('')}) ${threeBlock.join('')}-${fourBlock.join('')}`
 }
+
+//reverse a string
+function reverse(string) {
+	let newString = ''
+	for (var i = string.length - 1; i >= 0; i--) {
+       newString += string[i]
+    }
+	return newString
+}
+
+function reverseString(str) {
+  if (str === '')
+    return ''
+  else
+    return reverseString(str.substr(1)) + str.charAt(0)
+}
