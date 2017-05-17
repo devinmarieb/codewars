@@ -99,4 +99,12 @@ function reverse(string) {
     return reverseString(string.substr(1)) + string.charAt(0)
 }
 
-//staircase 
+//staircase
+function stairCase(n) {
+  let space = " "
+  let symbol = "x"
+  for(let i = 1; i <= n; i++) {
+    document.write(space.repeat(n - i).concat(symbol.repeat(i)))
+    document.write('<br />')
+  }
+}
