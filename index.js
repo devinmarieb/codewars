@@ -122,3 +122,18 @@ function separate(str){
     }
   return finalArray;
 }
+
+//palindrome builder
+function palindrome(n) {
+  let num = JSON.stringify(n)
+  let array = num.split('')
+  let reverseNumbers = array.reverse()
+  let original = n
+  let reversed = parseInt(reverseNumbers.join(''))
+  if(original == reversed) {
+    return original
+  } else {
+     let answer = JSON.stringify(original).concat(JSON.stringify(reversed))
+     return parseInt(answer)
+  }
+}
