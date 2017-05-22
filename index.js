@@ -138,7 +138,7 @@ function palindrome(n) {
   }
 }
 
-//palindrome recursively?
+//palindrome recursively? - haven't tested yet
 //function palindrome(n) {
 //   let reversed = JSON.stringify(n).split('').reverse().join('')
 //   let toAdd = parseInt(reversed)
@@ -168,3 +168,11 @@ function sortByLength(array) {
     a.length - b.length
   })
 }
+
+//remove smallest number from array
+function removeSmallest(numbers) {
+  var min = Math.min(...numbers);
+  var index = numbers.indexOf(min);
+  numbers.splice(index, 1);
+  return numbers;
+}g
