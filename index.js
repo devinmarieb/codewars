@@ -137,3 +137,22 @@ function palindrome(n) {
      return parseInt(answer)
   }
 }
+
+//palindrome recursively?
+//function palindrome(n) {
+//   let reversed = JSON.stringify(n).split('').reverse().join('')
+//   let toAdd = parseInt(reversed)
+//   if(n == toAdd) {
+//     return n
+//   } else {
+//       let answer = n + toAdd
+//       palindromeChainLength(answer)
+//   }
+// }
+
+
+//learn about regex to replace instances in string
+function songDecoder(song){
+  let dubStep = /(WUB)+/g
+  return song.replace(dubStep, ' ').trim()
+}
