@@ -156,3 +156,15 @@ function songDecoder(song){
   let dubStep = /(WUB)+/g
   return song.replace(dubStep, ' ').trim()
 }
+
+//sort array by length of strings at index
+//this one works
+function sortByLength(array) {
+  return array.sort((a, b) => a.length - b.length)
+}
+//this one doesn't... why?
+function sortByLength(array) {
+  return array.sort((a, b)=> {
+    a.length - b.length
+  })
+}
