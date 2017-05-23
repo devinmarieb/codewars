@@ -175,4 +175,13 @@ function removeSmallest(numbers) {
   var index = numbers.indexOf(min);
   numbers.splice(index, 1);
   return numbers;
-}g
+}
+
+//find outlier number
+function stray(numbers) {
+  for(let i = 0; i < numbers.length; i++) {
+    if(numbers[i] !== numbers[i+1] && numbers[i] !== numbers[i-1]) {
+      return numbers[i]
+    }
+  }
+}
