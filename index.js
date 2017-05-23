@@ -185,3 +185,17 @@ function stray(numbers) {
     }
   }
 }
+
+//find smallest number
+class SmallestIntegerFinder {
+  findSmallestInt(array) {
+    let newArray = array.sort((a, b)=> a - b)
+    return array[0]
+  }
+}
+//using Math.min
+class SmallestIntegerFinder {
+  findSmallestInt(args) {
+    return Math.min(...args)
+  }
+}
