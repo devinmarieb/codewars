@@ -199,3 +199,11 @@ class SmallestIntegerFinder {
     return Math.min(...args)
   }
 }
+
+//find smallest and largest number in arrayg
+function minMax(array) {
+  let min = Math.min(...array)
+  let max = Math.max(...array)
+  array = [min, max]
+  return array
+}
