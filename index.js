@@ -208,7 +208,7 @@ function minMax(array) {
   return array
 }
 
-//find longest integer in array. If same length, return first.
+//find longest integer in array. If same length, return first
 function findLongest(array){
   return array.reduce((a, b)=> {
       if(JSON.stringify(a).length === JSON.stringify(b).length) {
@@ -216,4 +216,14 @@ function findLongest(array){
       } else {
       } return Math.max(a, b)
   })
+}
+
+//If string contains 'coverage' change to 'covfefe', else add it on end
+function covfefe(str){
+  let idiot = /coverage/gi
+  if(str.includes('coverage') === true) {
+    return str.replace(idiot, 'covfefe')
+  } else {
+      return str.concat(' covfefe')
+  }
 }
