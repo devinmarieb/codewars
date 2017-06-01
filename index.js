@@ -266,3 +266,24 @@ function findSum(n) {
   }
   return sum
 }
+
+//dna strands
+function DNAStrand(dna){
+ let answer = dna.split('').map((l)=> {
+    switch(l) {
+      case 'A':
+        return 'T'
+        break
+      case 'T':
+        return 'A'
+        break
+      case 'C':
+        return 'G'
+        break
+      case 'G':
+        return 'C'
+        break
+    }
+  })
+  return answer.join('')
+}
