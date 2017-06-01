@@ -85,18 +85,18 @@ function reverse(string) {
 }
 
 function reverse(string) {
-	let newString = ''
-	for (let i = string.length - 1; i >= 0; i--) {
+  let newString = ''
+  for (let i = string.length - 1; i >= 0; i--) {
        newString += string[i]
     }
-	return newString
+    return newString
 }
 
 function reverse(string) {
   if (string === '')
     return ''
   else
-    return reverseString(string.substr(1)) + string.charAt(0)
+    return reverse(string.substr(1)) + string.charAt(0)
 }
 
 //staircase
@@ -218,7 +218,7 @@ function findLongest(array){
   })
 }
 
-//If string contains 'coverage' change to 'covfefe', else add it on end
+//if string contains 'coverage' change to 'covfefe', else add it on end
 function covfefe(str){
   let idiot = /coverage/gi
   if(str.includes('coverage') === true) {
@@ -226,4 +226,15 @@ function covfefe(str){
   } else {
       return str.concat(' covfefe')
   }
+}
+
+//square every number
+function squareDigits(num){
+  let answer = []
+  let n = JSON.stringify(num)
+  n = n.split('')
+  n.map((intg)=> {
+    answer.push(parseInt(intg) * parseInt(intg))
+  })
+  return parseInt(answer.join(''))
 }
