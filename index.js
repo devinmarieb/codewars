@@ -238,3 +238,20 @@ function squareDigits(num){
   })
   return parseInt(answer.join(''))
 }
+
+//check to see if string is an isogram
+function isIsogram(str){
+  let string = str.toLowerCase()
+  if(str == '') {
+    return true
+  }
+  let array = []
+  for(let i = 0; i < str.length; i ++) {
+    if(!array.includes(string[i])) {
+      array.push(string[i])
+    } else {
+        return false
+    }
+  }
+  return true
+}
