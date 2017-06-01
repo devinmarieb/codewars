@@ -208,9 +208,12 @@ function minMax(array) {
   return array
 }
 
-function minMax(array) {
-  let min = Math.min(...array)
-  let max = Math.max(...array)
-  array = [min, max]
-  return array
+//find longest integer in array. If same length, return first.
+function findLongest(array){
+  return array.reduce((a, b)=> {
+      if(JSON.stringify(a).length === JSON.stringify(b).length) {
+        return a
+      } else {
+      } return Math.max(a, b)
+  })
 }
