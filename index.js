@@ -331,3 +331,10 @@ function findShort(s) {
   }
   return answer[0].length
 }
+
+//greeting
+function greet(name) {
+  let answer
+  name === '' || name === null ? answer = null : answer = 'hello ' + name + '!'
+  return answer
+}
