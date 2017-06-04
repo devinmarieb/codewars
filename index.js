@@ -287,3 +287,16 @@ function DNAStrand(dna){
   })
   return answer.join('')
 }
+
+//is number a perfect power
+var isPP = function(n) {
+  for(let i = 0; i <= n; i++) {
+    for(let j = 0; j <=n; j++) {
+      if(Math.pow(i, j) === n) {
+        return [i, j]
+      } else if(i === n) {
+        return null
+      }
+    }
+  }
+}
