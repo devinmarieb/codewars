@@ -300,3 +300,22 @@ var isPP = function(n) {
     }
   }
 }
+
+//check if strings contain same number of x and o
+function XO(str) {
+  let x = []
+  let o = []
+  for(let i = 0; i < str.length; i++) {
+    if(str[i].toLowerCase() === 'x') {
+      x.push(str[i])
+    }
+    if(str[i].toLowerCase() === 'o') {
+      o.push(str[i])
+    }
+  }
+  if(x.length === o.length) {
+    return true
+  } else {
+    return false
+  }
+}
