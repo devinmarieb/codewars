@@ -319,3 +319,15 @@ function XO(str) {
     return false
   }
 }
+
+//find shortest word length
+function findShort(s) {
+  let wordArray = s.split(' ')
+  let answer = [wordArray[0]]
+  for(let i = 0; i < wordArray.length; i ++) {
+    if(wordArray[i].length < answer[0].length) {
+      answer.splice(0, 1, wordArray[i])
+    }
+  }
+  return answer[0].length
+}
