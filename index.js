@@ -338,3 +338,22 @@ function greet(name) {
   name === '' || name === null ? answer = null : answer = 'hello ' + name + '!'
   return answer
 }
+
+//return index of all uppercase letters in stringvar capitals = function (word) {
+  let answer = []
+  for(let i = 0; i < word.length; i ++) {
+    if(word[i] === word[i].toUpperCase()) {
+      answer.push(word.indexOf(word[i]))
+    }
+  }
+  return answer
+}
+
+//return array of names with only 4 letters
+function friend(friends) {
+let answer = []
+  friends.map((name)=> {
+    name.length === 4 ? answer.push(name) : null
+  })
+   return answer
+}
