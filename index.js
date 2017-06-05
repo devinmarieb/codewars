@@ -357,3 +357,12 @@ let answer = []
   })
    return answer
 }
+
+//return high and low numbers in same string
+function highAndLow(numbers) {
+  let checkNums = numbers.split(' ')
+  let high = Math.max(...checkNums)
+  let low = Math.min(...checkNums)
+  let space = ' '
+  return `${JSON.stringify(high) + space + JSON.stringify(low)}`
+}
