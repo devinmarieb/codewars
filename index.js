@@ -110,10 +110,19 @@ function reverse(string) {
 
 //staircase
 function stairCase(n) {
-  let space = " "
-  let symbol = "x"
+  let symbol = 'x'
   for(let i = 1; i <= n; i++) {
-    document.write(space.repeat(n - i).concat(symbol.repeat(i)))
+    document.write(symbol.repeat(i))
+    document.write('<br />')
+  }
+}
+
+//staircase reverse direction (if space is empty string it doesn't work)
+function staircase(n) {
+  let x = 'x'
+  let space = 'o'
+  for(let i = n; i >= 0; i--) {
+    document.write(space.repeat(i).concat(x.repeat(n - i)))
     document.write('<br />')
   }
 }
