@@ -385,3 +385,17 @@ function likes(names) {
     return `${names[0]}, ${names[1]} and ${names.length - 2} others like this`
   }
 }
+
+//order by and swap odd numbers in array by ascending order
+function odds(array) {
+    for(let i = 0; i < array.length; i++) {
+        for(let j = 0; j < array.length; j++) {
+            if(array[j] % 2 !==0 && array[i] % 2 !==0 && array[j] > array[i]) {
+                let temp = array[j]
+                array[j] = array[i]
+                array[i] = temp
+            }
+        }
+    }
+    return array
+}
