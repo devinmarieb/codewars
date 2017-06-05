@@ -121,7 +121,7 @@ function stairCase(n) {
 function staircase(n) {
   let x = 'x'
   let space = 'o'
-  for(let i = n; i >= 0; i--) {
+  for(let i = n - 1; i >= 0; i--) {
     document.write(space.repeat(i).concat(x.repeat(n - i)))
     document.write('<br />')
   }
