@@ -93,6 +93,15 @@ function reverse(string) {
 }
 
 function reverse(string) {
+  let answer = []
+  let strArray = string.split('')
+  for(let i = strArray.length -1; i >=0; i--) {
+    answer.push(strArray[i])
+  }
+  return answer.join('')
+}
+
+function reverse(string) {
   if (string === '')
     return ''
   else
