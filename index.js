@@ -417,3 +417,25 @@ function odds(array) {
     }
     return array
 }
+
+//make class for number guesser game
+class Guesser {
+  constructor(number, lives) {
+    this.number = number
+    this.lives = lives
+  }
+
+  guess(n) {
+    if(this.lives <=0) {
+      throw new Error('Already dead');
+    }
+    if(n !== this.number) {
+      this.lives -= 1
+      return false
+    } else {
+        if(n === this.number) {
+          return true
+      }
+    }
+  }
+}
