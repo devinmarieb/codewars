@@ -156,35 +156,16 @@ function palindrome(n) {
   }
 }
 
-//palindrome recursively? - haven't tested yet
-//function palindrome(n) {
-//   let reversed = JSON.stringify(n).split('').reverse().join('')
-//   let toAdd = parseInt(reversed)
-//   if(n == toAdd) {
-//     return n
-//   } else {
-//       let answer = n + toAdd
-//       palindromeChainLength(answer)
-//   }
-// }
 
-
-//learn about regex to replace instances in string
+//regex to replace instances in string
 function songDecoder(song){
   let dubStep = /(WUB)+/g
   return song.replace(dubStep, ' ').trim()
 }
 
 //sort array by length of strings at index
-//this one works
 function sortByLength(array) {
   return array.sort((a, b) => a.length - b.length)
-}
-//this one doesn't... why?
-function sortByLength(array) {
-  return array.sort((a, b)=> {
-    a.length - b.length
-  })
 }
 
 //remove smallest number from array
@@ -211,6 +192,7 @@ class SmallestIntegerFinder {
     return array[0]
   }
 }
+
 //using Math.min
 class SmallestIntegerFinder {
   findSmallestInt(args) {
